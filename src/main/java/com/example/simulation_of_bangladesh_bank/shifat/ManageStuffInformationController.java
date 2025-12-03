@@ -5,6 +5,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class ManageStuffInformationController
 {
@@ -45,6 +46,13 @@ public class ManageStuffInformationController
 
     @javafx.fxml.FXML
     public void initialize() {
+        employeeColumn.setCellValueFactory(new PropertyValueFactory<>("employeeID"));
+        nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        departmentColumn.setCellValueFactory(new PropertyValueFactory<>("department"));
+        positionColumn.setCellValueFactory(new PropertyValueFactory<>("position"));
+        salaryColumn.setCellValueFactory(new PropertyValueFactory<>("salary"));
+        statusColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
+
     }
 
     @javafx.fxml.FXML

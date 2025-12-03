@@ -2,6 +2,7 @@ package com.example.simulation_of_bangladesh_bank.shifat;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class ManageForeignCurrencyController
 {
@@ -34,6 +35,10 @@ public class ManageForeignCurrencyController
 
     @javafx.fxml.FXML
     public void initialize() {
+        reserveColumn.setCellValueFactory(new PropertyValueFactory<>("reserveID"));
+        amountColumn.setCellValueFactory(new PropertyValueFactory<>("amount"));
+        currencyTypeColumn.setCellValueFactory(new PropertyValueFactory<>("currencyType"));
+        updatedDateColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
     }
 
     @javafx.fxml.FXML

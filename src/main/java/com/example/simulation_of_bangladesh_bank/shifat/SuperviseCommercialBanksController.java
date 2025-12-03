@@ -5,6 +5,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class SuperviseCommercialBanksController
 {
@@ -45,6 +46,12 @@ public class SuperviseCommercialBanksController
 
     @javafx.fxml.FXML
     public void initialize() {
+        bankColumn.setCellValueFactory(new PropertyValueFactory<>("bankId"));
+        nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        licenseColumn.setCellValueFactory(new PropertyValueFactory<>("licensenumber"));
+        typeColumn.setCellValueFactory(new PropertyValueFactory<>("type"));
+        statusColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
+
     }
 
     @javafx.fxml.FXML

@@ -2,6 +2,7 @@ package com.example.simulation_of_bangladesh_bank.shifat;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class ManageCircularsNoticesController
 {
@@ -38,6 +39,13 @@ public class ManageCircularsNoticesController
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        circularColumn.setCellValueFactory(new PropertyValueFactory<>("circularID"));
+        titleColumn.setCellValueFactory(new PropertyValueFactory<>("title"));
+        issueDateColumn.setCellValueFactory(new PropertyValueFactory<>("issueDate"));
+        expireDateColumn.setCellValueFactory(new PropertyValueFactory<>("expireDate"));
+        statusColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
+
     }
 
     @javafx.fxml.FXML

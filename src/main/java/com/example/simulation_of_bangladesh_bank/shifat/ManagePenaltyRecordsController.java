@@ -5,6 +5,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class ManagePenaltyRecordsController
 {
@@ -39,6 +40,11 @@ public class ManagePenaltyRecordsController
 
     @javafx.fxml.FXML
     public void initialize() {
+        penaltyColumn.setCellValueFactory(new PropertyValueFactory<>("penaltyID"));
+        nameColumn.setCellValueFactory(new PropertyValueFactory<>("bankName"));
+        amountColumn.setCellValueFactory(new PropertyValueFactory<>("fineAmount"));
+        reasonColumn.setCellValueFactory(new PropertyValueFactory<>("reason"));
+        dateColumn.setCellValueFactory(new PropertyValueFactory<>("dateIssued"));
     }
 
     @javafx.fxml.FXML

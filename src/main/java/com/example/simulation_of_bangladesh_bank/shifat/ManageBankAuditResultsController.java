@@ -2,6 +2,7 @@ package com.example.simulation_of_bangladesh_bank.shifat;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class ManageBankAuditResultsController
 {
@@ -36,6 +37,12 @@ public class ManageBankAuditResultsController
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        auditColumn.setCellValueFactory(new PropertyValueFactory<>("auditID"));
+        auditDateColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
+        bankColumn.setCellValueFactory(new PropertyValueFactory<>("bankName"));
+        auditorNameColumn.setCellValueFactory(new PropertyValueFactory<>("auditorName"));
+        summaryColumn.setCellValueFactory(new PropertyValueFactory<>("summary"));
     }
 
     @javafx.fxml.FXML

@@ -2,6 +2,7 @@ package com.example.simulation_of_bangladesh_bank.shifat;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class ManageNational_InterestRatesController
 {
@@ -34,6 +35,10 @@ public class ManageNational_InterestRatesController
 
     @javafx.fxml.FXML
     public void initialize() {
+        rateColumn.setCellValueFactory(new PropertyValueFactory<>("rateID"));
+        rateTypeColumn.setCellValueFactory(new PropertyValueFactory<>("rateType"));
+        percentageColumn.setCellValueFactory(new PropertyValueFactory<>("percentage"));
+        effectiveDateColumn.setCellValueFactory(new PropertyValueFactory<>("effectiveDate"));
     }
 
     @javafx.fxml.FXML

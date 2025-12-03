@@ -2,6 +2,7 @@ package com.example.simulation_of_bangladesh_bank.shifat;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class ManageMonetaryPoliciesController
 {
@@ -26,8 +27,6 @@ public class ManageMonetaryPoliciesController
     @javafx.fxml.FXML
     private TextField dateOfImplementation1;
     @javafx.fxml.FXML
-    private TableColumn<ManageMonetaryPolicies, String> policyID4;
-    @javafx.fxml.FXML
     private TableColumn<ManageMonetaryPolicies, String> dateOfImplementation3;
     @javafx.fxml.FXML
     private TextField descriptionID2;
@@ -37,9 +36,15 @@ public class ManageMonetaryPoliciesController
     private TableView<ManageMonetaryPolicies> tableview;
     @javafx.fxml.FXML
     private TableColumn<ManageMonetaryPolicies, String> statusID3;
+    @javafx.fxml.FXML
+    private TableColumn<ManageMonetaryPolicies, String> policyColumn;
 
     @javafx.fxml.FXML
     public void initialize() {
+        policyColumn.setCellValueFactory(new PropertyValueFactory<>("policyId"));
+        policyName3.setCellValueFactory(new PropertyValueFactory<>("policyName"));
+        dateOfImplementation3.setCellValueFactory(new PropertyValueFactory<>("date"));
+        statusID3.setCellValueFactory(new PropertyValueFactory<>("status"));
     }
 
     @javafx.fxml.FXML
