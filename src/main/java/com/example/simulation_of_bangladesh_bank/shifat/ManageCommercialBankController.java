@@ -16,8 +16,6 @@ public class ManageCommercialBankController
 {
     @javafx.fxml.FXML
     private TableView<ManageCommercialBank> tableID;
-    private List<ManageCommercialBank> manageCommercialBankArrayList = new ArrayList<>();
-    private File file = new File( "data/MangeCommercialBank.bin");
     @javafx.fxml.FXML
     private TableColumn<ManageCommercialBank, String> licenseColumn;
     @javafx.fxml.FXML
@@ -50,6 +48,8 @@ public class ManageCommercialBankController
     private TextField licenseID;
     @javafx.fxml.FXML
     private ComboBox<String> statusID2;
+    private List<ManageCommercialBank> manageCommercialBankArrayList = new ArrayList<>();
+    private File file = new File( "data/MangeCommercialBank.bin");
 
 
     @javafx.fxml.FXML
